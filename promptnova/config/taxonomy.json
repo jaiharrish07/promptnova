@@ -1,0 +1,62 @@
+{
+  "instruction_override": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Instruction Override",
+    "owasp": "LLM01",
+    "severity": "Medium"
+  },
+  "data_exfiltration": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Context Leakage",
+    "owasp": "LLM06",
+    "severity": "High"
+  },
+  "role_escalation": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Role Escalation",
+    "owasp": "LLM01",
+    "severity": "Medium"
+  },
+  "jailbreak_policy_bypass": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Policy Bypass",
+    "owasp": "LLM01",
+    "severity": "High"
+  },
+  "indirect_injection": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Indirect Injection",
+    "owasp": "LLM01",
+    "severity": "Medium"
+  },
+  "policy_violation": {
+    "attack_type": "Policy Violation",
+    "subtype": "Context Policy Breach",
+    "owasp": "LLM06",
+    "severity": "Medium"
+  },
+  "deny_system_prompt": {
+    "attack_type": "Prompt Injection",
+    "subtype": "System Prompt Exfiltration",
+    "owasp": "LLM06",
+    "severity": "High"
+  },
+  "constraint_relaxation": {
+    "attack_type": "Prompt Injection",
+    "subtype": "Constraint Relaxation",
+    "owasp": "LLM01",
+    "severity": "Medium"
+  },
+  "violent_harm": {
+    "attack_type": "Safety Abuse",
+    "subtype": "Physical Harm",
+    "owasp": "LLM02",
+    "severity": "High"
+  },
+  "theft_robbery": {
+    "attack_type": "Safety Abuse",
+    "subtype": "Theft/Robbery",
+    "owasp": "LLM02",
+    "severity": "High"
+  }
+}

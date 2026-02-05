@@ -1,0 +1,10 @@
+.venv/
+promptguard_env/
+promptnova_env/
+__pycache__/
+logs/
+.env
+feedback.csv
+*.pyc
+*.log
+*.joblib

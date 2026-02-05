@@ -1,0 +1,53 @@
+severity_weights:
+  Low: 0.3
+  Medium: 0.6
+  High: 0.9
+policies:
+  - id: deny_system_prompt
+    description: Block requests for system prompts or hidden instructions
+    severity: High
+    match:
+      type: regex
+      patterns:
+        - "(reveal|show|display|expose|print).*(system prompt|system message|internal instructions|hidden instructions)"
+        - "(system prompt|system message|internal instructions|hidden instructions).*(reveal|show|display|expose|print)"
+    allow_if:
+      keywords:
+        - "what is a system prompt"
+        - "explain system prompt"
+  - id: constraint_relaxation
+    description: Prevent instruction override or relaxation of guardrails
+    severity: Medium
+    match:
+      type: regex
+      patterns:
+        - "(ignore|disregard|forget).*(previous|earlier|system) instructions"
+        - "developer mode"
+        - "unrestricted ai"
+  - id: role_escalation
+    description: Prevent privileged role impersonation
+    severity: Medium
+    match:
+      type: regex
+      patterns:
+        - "act as (a )?(system|developer|admin|root|unrestricted|unfiltered|uncensored)"
+  - id: violent_harm
+    description: Block requests for physical harm or murder
+    severity: High
+    match:
+      type: regex
+      patterns:
+        - "\\bhow to (kill|murder|poison) (a |the )?(person|someone|people|human)\\b"
+        - "\\bkill (a |the )?person\\b"
+        - "\\bmurder (a |the )?(person|someone)\\b"
+        - "\\bmake (a )?(bomb|weapon)\\b"
+  - id: theft_robbery
+    description: Block requests that facilitate theft, robbery, or mugging
+    severity: High
+    match:
+      type: regex
+      patterns:
+        - "\\bhow to (steal|rob|mug|snatch)\\b"
+        - "\\bsnatch (a |the )?(chain|purse|bag|phone|wallet)\\b"
+        - "\\bsnatch .* from (a |the )?(lady|woman|man|person)\\b"
+        - "\\bhow to (pickpocket|shoplift)\\b"
