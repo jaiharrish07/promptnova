@@ -1031,3 +1031,42 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 });
+
+/* --- Nova Prime UI Effects (Added dynamically) --- */
+document.addEventListener('DOMContentLoaded', () => {
+    // 3D Tilt Effect for Magic Cards
+    const cards = document.querySelectorAll('.magic-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate center
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate tilt amount (max 10deg)
+            const rotateX = ((y - centerY) / centerY) * -5;
+            const rotateY = ((x - centerX) / centerX) * 5;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            
+            // Dynamic Spotlight Gradient
+            // card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.08) 0%, rgba(10,10,12,0) 80%), linear-gradient(180deg, rgba(20,20,22,0.6) 0%, rgba(10,10,12,0.8) 100%)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            // Reset background
+            // card.style.background = 'linear-gradient(180deg, rgba(20,20,22,0.6) 0%, rgba(10,10,12,0.8) 100%)';
+        });
+    });
+
+    // Decoding Text Effect for Hero Title
+    const heroTitle = document.querySelector('.hero-title');
+    if(heroTitle) {
+        // Simple 'decoding' simulation could go here
+    }
+});
