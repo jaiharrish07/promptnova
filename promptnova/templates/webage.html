@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Nova - Hybrid AI Security</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts: Inter + Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/style1.css">
+  </head>
+  <body>
+    <!-- Navbar Container -->
+    <nav class="navbar-container animate-enter">
+      <header>
+        <a href="/" class="brand-link">
+          <svg width="24" height="24" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <defs>
+               <linearGradient id="header_nova" x1="0" y1="32" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                 <stop offset="0%" stop-color="#00F0FF" /> <stop offset="100%" stop-color="#7000FF" /> </linearGradient>
+             </defs>
+             <rect width="40" height="32" rx="6" fill="#0A0A0A" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+             <path d="M8 24 L18 16 L28 20" stroke="url(#header_nova)" stroke-width="3" stroke-linecap="round" />
+             <path d="M8 8 L22 16 L32 10" stroke="url(#header_nova)" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span class="brand-text">Prompt Nova</span>
+        </a>
+
+        <div class="d-none d-md-flex">
+            <a href="./get_started.html" class="nav-link">Overview</a>
+            <a href="#" class="nav-link">Features</a>
+            <a href="./download.html" class="nav-link">Download</a>
+        </div>
+        
+        <a href="http://172.16.44.221:5050" class="btn-nav-cta">Live Demo</a>
+      </header>
+    </nav>
+
+    <main class="wrapper px-4">
+      <section class="section hero-stack text-center">
+        <div class="mb-5 d-flex justify-content-center animate-enter delay-1">
+          <div style="position: relative;">
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 140px; height: 140px; background: radial-gradient(circle, rgba(112,0,255,0.3) 0%, transparent 70%); filter: blur(30px);"></div>
+              
+              <svg width="120" height="100" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: relative; z-index: 2; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));">
+                <defs>
+                  <linearGradient id="nova_shatter" x1="0" y1="32" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#00F0FF" />
+                    <stop offset="100%" stop-color="#7000FF" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="32" rx="4" fill="#050505" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                <g>
+                  <path d="M8 24 L18 16 L28 20" stroke="url(#nova_shatter)" stroke-width="2" stroke-linecap="square" />
+                  <path d="M8 8 L22 16 L32 10" stroke="url(#nova_shatter)" stroke-width="2" stroke-linecap="square">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; 2,-1; 0,0" dur="3s" repeatCount="indefinite" />
+                  </path>
+                  <rect x="19" y="14" width="4" height="4" fill="white" transform="rotate(45 21 16)">
+                    <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite" />
+                  </rect>
+                </g>
+              </svg>
+          </div>
+        </div>
+        
+        <h1 class="display-4 hero-title mb-4 animate-enter delay-2">
+          Secure Your AI <br />
+          with <span class="text-gradient-shimmer">Confidence</span>
+        </h1>
+        
+        <div class="col-lg-7 mx-auto animate-enter delay-2">
+          <p class="lead mb-5 text-muted">
+            Prompt Nova is the hybrid security layer for the AI era. <br/>
+            Detect and prevent injection attacks <span style="color: #fff;">in real-time</span>.
+          </p>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-5">
+            <a href="./get_started.html" class="btn btn-primary-glow">Get Started</a>
+            <a href="./download.html" class="btn btn-secondary-glass">Download</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-label">Why Prompt Nova</span>
+          <h2 class="section-title">Hybrid defense, real-time response</h2>
+          <p class="text-muted">Protect every prompt with layered detection, policy enforcement, and explainable output.</p>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-lg-3 animate-enter delay-3">
+        <div class="col">
+          <div class="magic-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a7.97 7.97 0 0 0 .1-6" />
+                <path d="M4.5 9a8 8 0 0 0 0 6" />
+                <path d="M9 19.4a8 8 0 0 0 6 0" />
+                <path d="M15 4.6a8 8 0 0 0-6 0" />
+              </svg>
+            </div>
+            <h3 class="card-title">How It Works</h3>
+            <p class="card-text">
+              User sends a prompt, Prompt Nova analyzes it using rules, ML, and policies. A hybrid risk score (0–100) is generated to decide whether to Allow, Sanitize, or Block.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="magic-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+                <path d="M10 6h4M6 10v4M18 10v4M10 18h4" />
+              </svg>
+            </div>
+            <h3 class="card-title">Hybrid Technology</h3>
+            <p class="card-text">
+              Three-layer defense: Rule-Based Detection, ML Semantic Analysis (TF-IDF + Logistic Regression), and a Policy Engine. Balances accuracy and speed.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="magic-card">
+            <div class="card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12h18" />
+                <path d="M12 3v18" />
+                <circle cx="12" cy="12" r="3" />
+                <path d="M5 5l4 4M15 15l4 4M19 5l-4 4M9 15l-4 4" />
+              </svg>
+            </div>
+            <h3 class="card-title">Enterprise Scale</h3>
+            <p class="card-text">
+              Lightweight API-based middleware with real-time response times. Scales easily for startups and enterprise AI systems with roadmap for advanced monitoring dashboards.
+            </p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-surface">
+          <div>
+            <h2>Launch your secure prompt stack</h2>
+            <p class="text-muted">Install the SDK, run the live demo, or connect to the hosted API.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="./download.html" class="btn btn-primary-glow">Download</a>
+            <a href="http://172.16.44.221:5050" class="btn btn-secondary-glass">Live Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 Prompt Nova. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
